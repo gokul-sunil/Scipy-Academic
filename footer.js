@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainContent = document.querySelector(".sectionContent-5-main");
 
     function isSmallScreen() {
-        return window.innerWidth <= 986;
+        return window.innerWidth <= 886;
     }
 
     function resetPushDivs() {

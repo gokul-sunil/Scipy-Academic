@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    /* display: flex;
+    justify-content: flex-end; */
+    overflow-x: hidden;
+  }
+  .slider1MainContainer {
+    width: 85%;
+    /* border: 2px solid black; */
+  }
+  .slider1Container {
+    height: 100vh;
+    width: 75%;
+    position: absolute;
+    right: 0;
+    /* background: #000; */
+    display: flex;
+    transform: translateX(0); /* Default position */
+    transition: transform 0.5s ease-in-out;
+    /* border: 2px solid black; */
+    overflow-y: hidden;
+  }
+  .slider1Container.active {
+    transform: translateX(100%);
+    /* opacity: 0; */
+  }
+  .slider1Left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    /* border: 2px solid black; */
+  
+    /* border: 2px solid rgb(233, 225, 225); */
+  }
+  .slider1Img {
+    width: 100%;
+    height: 100%;
+    /* background-image: url("./images/free-photo-of-mystical-forest-in-madeira-with-sunlit-moss.jpeg"); */
+    object-fit: contain;
+    background-color: beige;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slider-image1{
+width: 100%;
+height: 100%;
+object-fit: cover;
+  }
+  .slider1CloseDiv {
+    width: 50px;
+    height: 45px;
+    background-color: rgb(13, 87, 72);
+    /* padding: 10px 0 0 10px; */
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sliderClosePng {
+    width: 38px;
+    height: 35px;
+    /* margin: auto; */
+  }
+  .slider1Right {
+    width: 100%;
+    /* background-color: #f6f0f0; */
+    overflow-y: scroll;
+    height: 100%;
+  
+    /* border: 2px solid black; */
+  }
+  
+  .sl1R-mainDiv {
+    width: 80%;
+    /* height: 100vh; */
+    /* background: #000; */
+    /* overflow-y: scroll; */
+    background-color: rgb(50, 114, 102);
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .sl1R-singleBoxMain {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(13, 87, 72);
+    color: #ffff;
+    padding: 10px 0 0 10px;
+    font-size: 24px;
+    /* border-bottom:0.5px solid rgb(255 255 255) ; */
+  }
+  .sl1R-singleBox {
+    width: 100%;
+    background-color: rgb(13, 87, 72);
+    height: 50px;
+    color: rgb(192, 227, 220);
+    font-size: 13px;
+    padding: 10px 0 0 10px;
+    /* border-bottom:0.5px solid rgb(255 255 255) ; */
+  }
+  .sl1R-contentDiv {
+    margin: 2rem auto;
+    width: 80%;
+    /* height: 1200px; */
+    /* background-color: aquamarine; */
+  }
+  .sl1R-contentParaHeading {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px 0 10px 0;
+  }
+  .sl1R-contentPara {
+    font-size: 15px;
+  }
+  @media (max-width: 1055px) {
+    .slider1MainContainer {
+      width: 100%;
+    }
+    .slider1Container {
+      width: 100%;
+    }
+  }
+  @media (max-width: 830px) {
+    .slider1Left {
+      width: 0;
+    }
+    .slider1CloseDiv {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .slider1Img {
+      display: none;
+    }
+    .sl1R-singleBoxMain {
+      font-size: 18px;
+      padding: 8px 0 0 8px;
+    }
+    .sl1R-singleBox {
+      font-size: 10px;
+      padding: 8px 0 0 8px;
+    }
+    .sl1R-contentParaHeading {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .sl1R-contentPara {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 590px) {
+    .slider1Left{
+      width: 30px;
+    }
+    .slider1Right{
+      width: 90%;
+    }
+    .sl1R-mainDiv{
+      width: 90%;
+      margin-left: 2rem;
+    }
+    /* .sliderClosePng {
+      width: 28px;
+      height: 25px;
+      /* margin: auto; 
+    } */
+    /* .slider1CloseDiv{
+      width: 34px;
+      height: 27px; 
+      /* padding: 10px; 
+  
+     } */
+  }
+  

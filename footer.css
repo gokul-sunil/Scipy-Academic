@@ -263,10 +263,10 @@
    
 }
 .sectionContent-5-singleDiv{
-    display: flex;
+    /* display: flex; */
     height: 50px;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
     cursor: pointer;
     color: #fff;
     border-bottom: 1px solid rgb(13, 110, 91);
@@ -390,6 +390,7 @@ display: flex;
 }
 .courseContent{
     margin-top: 25px;
+    line-height: 25px;
 }
 #push1, #push2, #push3 {
     display: none;

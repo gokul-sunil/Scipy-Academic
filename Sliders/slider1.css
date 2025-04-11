@@ -119,6 +119,7 @@ object-fit: cover;
   }
   .sl1R-contentPara {
     font-size: 15px;
+    line-height: 20px;
   }
   @media (max-width: 1055px) {
     .slider1MainContainer {

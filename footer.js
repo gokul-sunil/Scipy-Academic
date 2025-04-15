@@ -187,3 +187,91 @@ function changePage(dir) {
 document.addEventListener("DOMContentLoaded", () => {
   renderTabs();
 });
+
+//cont4
+const imageSlides = document.getElementById("slides");
+const textSlides = document.getElementById("textSlides");
+
+const barFill = document.getElementById('bar-fill');
+const currentSlideText = document.getElementById('current-slide');
+const totalSlidesText = document.getElementById('total-slides');
+
+const originalSlideCount = imageSlides.children.length - 1; // excluding clone
+let currentIndex = 0;
+let slideInterval;
+
+// Set total slide count (excluding clone)
+totalSlidesText.textContent = originalSlideCount;
+
+// Go to a specific slide
+function goToSlide(index) {
+  currentIndex = index;
+  slideTo(index);
+}
+
+// Animate transition to a slide
+function slideTo(index) {
+  imageSlides.style.transition = 'transform 0.5s ease-in-out';
+  textSlides.style.transition = 'transform 0.5s ease-in-out';
+
+  imageSlides.style.transform = `translateX(-${index * 100}%)`;
+  textSlides.style.transform = `translateX(-${index * 100}%)`;
+
+  updateProgressBar();
+}
+
+// Auto slide every 3 seconds
+function autoSlide() {
+  currentIndex++;
+
+  if (currentIndex === originalSlideCount) {
+    slideTo(currentIndex); // Animate to cloned last slide
+
+    setTimeout(() => {
+      // Instantly reset to real first slide (index 0)
+      imageSlides.style.transition = 'none';
+      textSlides.style.transition = 'none';
+
+      imageSlides.style.transform = `translateX(0%)`;
+      textSlides.style.transform = `translateX(0%)`;
+
+      currentIndex = 0;
+      updateProgressBar();
+
+      // Restore transition for the next loop
+      setTimeout(() => {
+        imageSlides.style.transition = 'transform 0.5s ease-in-out';
+        textSlides.style.transition = 'transform 0.5s ease-in-out';
+      }, 50);
+    }, 500); // Wait for transition to cloned slide
+  } else {
+    slideTo(currentIndex);
+  }
+}
+
+// Update the progress bar and counter
+function updateProgressBar() {
+  const total = originalSlideCount;
+  const current = currentIndex + 1 > total ? 1 : currentIndex + 1;
+
+  // Update slide counter
+  currentSlideText.textContent = current;
+
+  // Reset bar instantly
+  barFill.style.transition = 'none';
+  barFill.style.width = '0%';
+
+  // Then animate the fill over 3s
+  setTimeout(() => {
+    barFill.style.transition = 'width 3s linear';
+    barFill.style.width = '100%';
+  }, 50);
+}
+
+// Start the slider
+function startSlider() {
+  goToSlide(0);
+  slideInterval = setInterval(autoSlide, 3000);
+}
+
+startSlider();

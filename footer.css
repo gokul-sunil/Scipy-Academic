@@ -4,6 +4,49 @@
   box-sizing: border-box;
   list-style: none;
 }
+
+.main-container {
+  display: flex;
+}
+.header {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(13, 87, 72);
+  padding-top: 150px;
+  z-index: 999;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.nav-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transform: rotate(180deg);
+  transform-origin: center;
+  writing-mode: vertical-lr;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.nav-item span {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all ease 0.5s;
+}
+.nav-item span:hover {
+  --pulse-primary-color-brighter2: rgb(61, 147, 130);
+  color: var(--pulse-primary-color-brighter2);
+}
 .container1 {
   width: 100%;
   min-height: 750px;

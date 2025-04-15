@@ -1067,6 +1067,26 @@ display: flex;
     width: 100%;
     max-width: 100%;
   }
+  .right-main-4-lower {
+    display: none;
+  }
+  .contents-main-4{
+    flex-direction: column;
+  }
+  .left-main-4{
+    width: 100%;
+  }
+  .right-main-4 {
+    padding-right: 0;
+    width: 100%;
+  }
+  .overlay-text {
+    display: none;
+  }
+ 
+.slide-2{
+  display: none;
+}
 }
 
 @media (max-width: 886px) {

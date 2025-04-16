@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="./Sliders/slider1.css">
     <!-- <style>
       .secondContent-5 {
         display: none;
@@ -141,6 +142,7 @@
           </div>
   
           <div class="content" id="contentDisplay"></div>
+
         </div>
         <div class="container-4">
           <div class="container-4-sub">
@@ -167,66 +169,137 @@
                         <div class="slider-sub-4">
                           <div class="slider">
                             <div class="slides" id="slides">
-                              <div class="slide">
+                              <div class="slide" data-id="1" onclick="showSlideDetails(1)">
                                 <img
                                   src="./images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg"
                                   alt="Slide 1"
                                 />
+                                <div class="overlay-text-top">
+                                  <div class="overlay-text-style">
+                                    demo content
+                                  </div>
+                                </div>
                               </div>
-                              <div class="slide">
+                              <div class="slide" data-id="2" onclick="showSlideDetails(2)">
                                 <img
                                   src="./images/WhatsApp Image 2025-04-15 at 2.19.27 PM (2).jpeg"
                                   alt="Slide 2"
                                 />
+
+                                <div class="overlay-text-top">
+                                  <div class="overlay-text-style">
+                                    demo content
+                                  </div>
+                                </div>
                               </div>
-                              <div class="slide">
+                              <div class="slide" data-id="3" onclick="showSlideDetails(3)">
                                 <img
                                   src="./images/WhatsApp Image 2025-04-15 at 2.19.27 PM.jpeg"
                                   alt="Slide 3"
                                 />
-                              </div>
-                              <div class="slide">
-                                <img src="./images/slider.1.webp" alt="clone" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-  
-                        <div class="slider-info">
-                          <div class="slides" id="textSlides">
-                            <div class="slide slide-ifo-one slide-2">
-                              <div class="slide-ifo-container">
-                                <div class="overlay-text">hi-1</div>
-                                <div class="buttonOverlay"></div>
-                              </div>
-                            </div>
-                            <div class="slide slide-ifo-two slide-2">
-                              <div class="slide-ifo-container">
-                                <div class="slide-ifo-container">
-                                  <div class="overlay-text">hi-1</div>
-                                  <div class="buttonOverlay"></div>
+                                <div class="overlay-text-top">
+                                  <div class="overlay-text-style">
+                                    demo content
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="slide slide-ifo-three slide-2">
-                              <div class="slide-ifo-container">
-                                <div class="slide-ifo-container">
-                                  <div class="overlay-text">hi-1</div>
-                                  <div class="buttonOverlay"></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="slide slide-ifo-one slide-2">
-                              <div class="slide-ifo-container">
-                                <div class="slide-ifo-container">
-                                  <div class="overlay-text">hi-1</div>
-                                  <div class="buttonOverlay"></div>
+                              <div class="slide" data-id="1" onclick="showSlideDetails(1)">
+                                <img
+                                  src="./images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg"
+                                  alt="clone"
+                                />
+                                <div class="overlay-text-top">
+                                  <div class="overlay-text-style">
+                                    demo content
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <!-- <div class="dots" id="dots"></div>  -->
                         </div>
+
+                        <div class="slider-info-main">
+                          <div class="slider-info">
+                            <div class="slides" id="textSlides">
+                              <div class="slide slide-ifo-one slide-2"   data-id="1" onclick="showSlideDetails(1)" >
+                                <div class="slide-ifo-container">
+                                  <div class="overlay-text">
+                                    hi-1
+                                    <p>This is demo</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="slide slide-ifo-two slide-2"  data-id="2" onclick="showSlideDetails(2)">
+                                <div class="slide-ifo-container">
+                                  <div class="slide-ifo-container">
+                                    <div class="overlay-text">
+                                      hi-1
+                                      <p>This is demo</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="slide slide-ifo-three slide-2"  data-id="3" onclick="showSlideDetails(3)">
+                                <div class="slide-ifo-container">
+                                  <div class="slide-ifo-container">
+                                    <div class="overlay-text">
+                                      hi-1
+                                      <p>This is demo</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="slide slide-ifo-one slide-2"  data-id="1" onclick="showSlideDetails(1)"> 
+                                <div class="slide-ifo-container">
+                                  <div class="slide-ifo-container">
+                                    <div class="overlay-text">
+                                      hi-1
+                                      <p>This is demo</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="button-slider-2" id="nextBtn2">
+                            <button>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="WHITE"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="custom-cursor">
+                          <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="48"
+                          height="48"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="green"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <polygon points="10,8 16,12 10,16" />
+                        </svg>
+                        </div>
+                      </div>
+                      <div class="side-page" id="sidePage">
+                        <button class="close-btn" onclick="closeSidePage()">✖</button>
+                        <h2 id="detail-title"></h2>
+                        <div id="detail-description"></div>
                       </div>
                     </div>
                     <div class="right-main-4-lower">
@@ -390,6 +463,8 @@
           </div>
   
           <script src="./footer.js"></script>
+          <script src="./mainSlider.js"></script>
+
         </div>
       </div>
     </div>

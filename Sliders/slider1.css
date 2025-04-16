@@ -8,12 +8,13 @@
     overflow-x: hidden;
   }
   .slider1MainContainer {
-    width: 85%;
+    width: 100%;
     /* border: 2px solid black; */
+    overflow:hidden ;
   }
   .slider1Container {
     height: 100vh;
-    width: 75%;
+    width: 100%;
     position: absolute;
     right: 0;
     /* background: #000; */
@@ -159,14 +160,17 @@ object-fit: cover;
   }
   @media (max-width: 590px) {
     .slider1Left{
-      width: 30px;
+      display: none;
     }
     .slider1Right{
-      width: 90%;
+      margin-top: 50px;
+      width: 100%;
+      overflow-x: hidden;
     }
     .sl1R-mainDiv{
-      width: 90%;
-      margin-left: 2rem;
+      width: 100%;
+      margin-left: 0;
+
     }
     /* .sliderClosePng {
       width: 28px;

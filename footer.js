@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContainer.style.display = "block";
   });
 })
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const tabContentMap = {
     "web-development": "content-web-development",

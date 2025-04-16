@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const heading = document.querySelector(".carousel-item");
+  const mainContainer = document.querySelector(".cscontainer");
+  const carouselWrapper = document.querySelector(".cswrapper");
+
+
+  setTimeout(() => {
+    heading.style.opacity = 1;
+  }, 100);
+
+ 
+  setTimeout(() => {
+    heading.style.opacity = 0;
+  }, 3000);
+
+
+  heading.addEventListener("transitionend", () => {
+    carouselWrapper.style.display = "none";
+    mainContainer.style.display = "block";
+  });
+})
 document.addEventListener("DOMContentLoaded", () => {
   const tabContentMap = {
     "web-development": "content-web-development",

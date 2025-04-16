@@ -10,20 +10,8 @@
 } */
 .main-container {
   display: flex;
-  /* gap: 10px; */
-  /* flex-direction: column; */
-
-}
-.Outer-Container{
-display: flex;
-}
-/* Main content section */
-.inner-container {
-  margin-left: 50px;
-  flex: 1; /* Take remaining space */
 }
 .header {
-  
   padding-bottom: 10px;
   padding-top: 10px;
   height: 100vh;

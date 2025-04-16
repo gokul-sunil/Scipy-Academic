@@ -48,8 +48,8 @@
   }
   
   .course-singleTab {
-    background-color: #00b894;
-    color: white;
+    background-color: rgb(13, 87, 72);
+        color: white;
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
@@ -79,8 +79,8 @@
   
   .ReadMore-iconDiv {
     padding: 1rem;
-    background-color: #00b894;
-    display: flex;
+    background-color: rgb(13, 87, 72);
+        display: flex;
     justify-content: flex-end;
     align-items: center;
     border-top: 1px solid #dfe6e9;

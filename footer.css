@@ -4,7 +4,10 @@
   box-sizing: border-box;
   list-style: none;
 }
-
+/* .unni{
+  width: 96%;
+  padding-left: 1rem;
+} */
 .main-container {
   display: flex;
 }
@@ -79,7 +82,7 @@ nav {
   letter-spacing: 10px;
 }
 .container2 {
-  width: 100%;
+  width:fit-content;
   min-height: 250px;
   display: flex;
   align-items: center;
@@ -101,10 +104,10 @@ nav {
   gap: 10px;
 }
 
-h1,
+/* h1,
 h2 {
   margin: 0;
-}
+} */
 .heading-box2 h2 {
   font-size: 40px;
   font-weight: lighter;

@@ -857,13 +857,16 @@ footer {
   min-height: 400px;
   background: rgb(18, 123, 102);
   /* position: absolute; */
-  bottom: 0;
-  padding: 1rem;
+ 
+}
+.sub-container-5{
+  width: 95%;
+  margin: auto;
+  /* padding: 1rem; */
   display: flex;
-  margin-top: 100px;
+  margin-top: 50px;
 
   justify-content: space-evenly;
-  gap: 50px;
 }
 .sectionHead-5 {
   display: flex;
@@ -1194,7 +1197,9 @@ display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  .sub-container-5 {
+    flex-direction: column;
+  }
   .section1 {
     margin-left: 100px;
   }
@@ -1256,20 +1261,14 @@ display: flex;
   .slide-2 {
     display: none;
   }
-}
-
-@media (max-width: 886px) {
-  .container-5 {
-    flex-direction: column;
-  }
   .sectionHead-5 {
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   .sectionContent-5-main {
     flex-direction: column;
-    width: 90%;
-    max-width: 650px;
+    width: 100%;
     margin: auto;
   }
   .sectionContent-5-first {
@@ -1282,6 +1281,11 @@ display: flex;
   .sectionContent-5-second {
     width: 100%;
   }
+}
+
+@media (max-width: 886px) {
+  
+ 
   #push1.active,
   #push2.active,
   #push3.active {
@@ -1469,15 +1473,14 @@ display: flex;
 
 @media (max-width: 486px) {
   .container-5 {
-    padding: 0.4rem;
+    padding-right:20px;
   }
-  .sectionHead-5 {
-    width: 97%;
-    padding: 2rem;
+  .progressMain-5 {
+    gap: 0;
+    justify-content: space-between;
+    padding-bottom: 5PX;
   }
-  .sectionContent-5-main {
-    width: 100%;
-  }
+
   .detailsHead {
     gap: 10px;
   }

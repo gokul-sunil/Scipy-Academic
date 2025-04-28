@@ -1187,6 +1187,9 @@ display: flex;
   .image-section3 img {
     display: none;
   }
+  .rightcontainer2 p{
+    padding-left: 30px;
+  }
 
   .side-word {
     position: static;
@@ -1220,7 +1223,7 @@ display: flex;
     align-items: center;
     width: 100%;
     margin-left: 0;
-    padding: 50px 20px;
+    /* padding: 50px 20px; */
   }
 
   .box {
@@ -1311,6 +1314,7 @@ display: flex;
 
   .tab {
     display: none;
+    margin-left: 30px;
   }
 
   .tab.active {
@@ -1329,7 +1333,7 @@ display: flex;
   }
 
   .content {
-    padding: 20px;
+    margin-left: 50px;
   }
   .content h3 {
     color: #002147;
@@ -1362,7 +1366,7 @@ display: flex;
   }
 
   .section1 {
-    margin-left: 50px;
+    margin-left: 55px;
     text-align: center;
   }
 
@@ -1372,7 +1376,7 @@ display: flex;
 
   .container2 {
     flex-direction: column;
-    padding: 20px;
+    padding-left: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -1390,6 +1394,9 @@ display: flex;
     max-width: 100%;
     padding-left: 0;
   }
+  .content-section3{
+    padding-left: 40px;
+  }
 
   .image-section3 img {
     max-width: 250px;
@@ -1406,6 +1413,7 @@ display: flex;
     flex-direction: column;
     align-items: center;
   }
+  
 
   .leftcontainer2,
   .rightcontainer2 {

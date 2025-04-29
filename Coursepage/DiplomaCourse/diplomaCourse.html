@@ -6,6 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="./diplomaCourse.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
 
 </head>
 <body>
@@ -45,7 +50,7 @@
                       </div>
                     </div>
                 </section>  
-            <div class="courseSingleOuter">
+            <div class="courseSingleOuter" data-heading="Digital Marketing">
                 <span class="course-single-heading">
                     Digital Marketing
                   </span>
@@ -94,7 +99,11 @@
 
                           <img src="../../images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg" alt="Digital Marketing" class="course-image" />
                         </div>
-
+                        <div class="whatsapp-wrapper">
+                            <a href="https://wa.me/919876543210" class="enquiry-button" target="_blank" rel="noopener">
+                              Enquiry
+                            </a>
+                          </div>
                         </div>
                         <span class="read-more-btn" >Read More</span>
                       </div>
@@ -103,7 +112,7 @@
                   
                   
             </div> 
-            <div class="courseSingleOuter">
+            <div class="courseSingleOuter" data-heading=" Full Stack">
                 <span class="course-single-heading">
                     Full Stack
                   </span>
@@ -152,7 +161,11 @@
 
                           <img src="../../images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg" alt="Digital Marketing" class="course-image" />
                         </div>
-
+                        <div class="whatsapp-wrapper">
+                            <a href="https://wa.me/919876543210" class="enquiry-button" target="_blank" rel="noopener">
+                              Enquiry
+                            </a>
+                          </div>
                         </div>
                         <span class="read-more-btn">Read More</span>
                       </div>
@@ -161,7 +174,7 @@
                   
                   
             </div>
-            <div class="courseSingleOuter">
+            <div class="courseSingleOuter" data-heading="Data Science">
                 <span class="course-single-heading">
                     Data Science
                   </span>
@@ -210,7 +223,11 @@
 
                           <img src="../../images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg" alt="Digital Marketing" class="course-image" />
                         </div>
-
+                        <div class="whatsapp-wrapper">
+                            <a href="https://wa.me/919876543210" class="enquiry-button" target="_blank" rel="noopener">
+                              Enquiry
+                            </a>
+                          </div>
                         </div>
                         <span class="read-more-btn">Read More</span>
                       </div>
@@ -219,7 +236,7 @@
                   
                   
             </div> 
-            <div class="courseSingleOuter">
+            <div class="courseSingleOuter" data-heading="Full Stack">
                 <span class="course-single-heading">
                     Full Stack
                   </span>
@@ -268,7 +285,11 @@
 
                           <img src="../../images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg" alt="Digital Marketing" class="course-image" />
                         </div>
-
+                        <div class="whatsapp-wrapper">
+                            <a href="https://wa.me/919876543210" class="enquiry-button" target="_blank" rel="noopener">
+                              Enquiry
+                            </a>
+                          </div>
                         </div>
                         <span class="read-more-btn">Read More</span>
                       </div>
@@ -277,7 +298,7 @@
                   
                   
             </div>  
-            <div class="courseSingleOuter">
+            <div class="courseSingleOuter" data-heading="Demo">
                 <span class="course-single-heading">
                     Demo
                   </span>
@@ -326,7 +347,12 @@
 
                           <img src="../../images/WhatsApp Image 2025-04-15 at 2.19.27 PM (1).jpeg" alt="Digital Marketing" class="course-image" />
                         </div>
-
+                        <div class="whatsapp-wrapper">
+                            <a href="#" class="enquiry-button" target="_blank" rel="noopener">
+                              Enquiry
+                            </a>
+                          </div>
+                          
                         </div>
                         <span class="read-more-btn">Read More</span>
                       </div>
@@ -342,18 +368,32 @@
     <script>
         const readMoreBtns = document.querySelectorAll('.read-more-btn');
         const courseDescriptions = document.querySelectorAll('.course-description');
+        const enquiryButtons = document.querySelectorAll('.enquiry-button');
       
         readMoreBtns.forEach((btn, index) => {
           btn.addEventListener('click', () => {
             courseDescriptions[index].classList.toggle('expanded');
-            if (courseDescriptions[index].classList.contains('expanded')) {
-              btn.textContent = 'Read Less';
-            } else {
-              btn.textContent = 'Read More';
-            }
+            btn.textContent = courseDescriptions[index].classList.contains('expanded')
+              ? 'Read Less'
+              : 'Read More';
           });
         });
+      
+        enquiryButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default link behavior
+
+    const courseOuter = btn.closest('.courseSingleOuter');
+    const heading = courseOuter.dataset.heading || 'Course Enquiry';
+    const encodedMessage = encodeURIComponent(`Hi, I am interested in the "${heading}" course. Please provide more details.`);
+    const whatsappURL = `https://wa.me/919567951490?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank'); // Open in new tab
+  });
+});
+
       </script>
+      
       
       
 </body>
